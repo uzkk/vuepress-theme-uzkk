@@ -1,0 +1,20 @@
+{
+  "name": "vuepress-theme-uzkk",
+  "version": "1.0.0-alpha.0",
+  "main": "lib/index.js",
+  "description": "A VuePress theme designed for uzkk.net",
+  "author": "Shigma <1700011071@pku.edu.cn>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shigma/vuepress-theme-uzkk.git"
+  },
+  "dependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.43",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.43",
+    "vuepress-plugin-pangu": "^1.0.0"
+  },
+  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.43"
+  }
+}
