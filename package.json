@@ -10,11 +10,13 @@
     "url": "https://github.com/Shigma/vuepress-theme-uzkk.git"
   },
   "dependencies": {
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.43",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.43",
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.44",
+    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.44",
+    "vuepress-plugin-mathjax": "^1.2.0",
     "vuepress-plugin-pangu": "^1.0.0"
   },
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.43"
+    "vuepress": "^1.0.0-alpha.44",
+    "vuepress-plugin-serve": "^1.0.0"
   }
 }
