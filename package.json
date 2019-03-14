@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-uzkk",
-  "version": "1.0.0-alpha.0",
+  "version": "1.0.0-alpha.2",
   "main": "lib/index.js",
   "description": "A VuePress theme designed for uzkk.net",
   "author": "Shigma <1700011071@pku.edu.cn>",
@@ -10,10 +10,20 @@
     "url": "https://github.com/Shigma/vuepress-theme-uzkk.git"
   },
   "dependencies": {
+    "@vue/babel-preset-jsx": "^1.0.0-beta.2",
     "@vuepress/plugin-back-to-top": "^1.0.0-alpha.44",
+    "@vuepress/plugin-container": "1.0.0-alpha.44",
     "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.44",
+    "@vuepress/plugin-nprogress": "1.0.0-alpha.44",
+    "@vuepress/plugin-search": "1.0.0-alpha.44",
     "vuepress-plugin-mathjax": "^1.2.0",
-    "vuepress-plugin-pangu": "^1.0.0"
+    "vuepress-plugin-pangu": "^1.0.0",
+    "vuepress-plugin-serve": "^1.0.0",
+    "vuepress-mergeable": "^1.0.1",
+    "date-fns": "^1.30.1",
+    "lodash.debounce": "^4.0.8",
+    "lodash.throttle": "^4.1.1",
+    "vuepress-plugin-smooth-scroll": "^0.0.3"
   },
   "devDependencies": {
     "vuepress": "^1.0.0-alpha.44",
