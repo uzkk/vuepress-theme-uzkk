@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-uzkk",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "main": "lib/index.js",
   "description": "A VuePress theme designed for uzkk.net",
   "author": "Shigma <1700011071@pku.edu.cn>",

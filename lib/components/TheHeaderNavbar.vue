@@ -158,8 +158,10 @@ $lineHeight = $navbarHeight - ($gutter * 2)
       display none
   .navbar-links
     .search-box
-      flex: 0 0 auto
+      flex 0 0 auto
       vertical-align top
+      input
+        background-color #fffa
     @media (max-width $MQMobile - 1)
       &.show
         display block
