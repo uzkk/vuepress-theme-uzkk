@@ -45,3 +45,16 @@ export default {
 
 <style lang="stylus" src="../styles/index.styl"/>
 
+<style lang="stylus">
+
+main
+  margin 0 auto
+  padding 0 1rem
+  @media (min-width $MQWide)
+    max-width (($MQWide + $MQNarrow) / 2)
+  @media (min-width $MQNarrow) and (max-width $MQWide - 1px)
+    max-width $MQNarrow
+  @media (max-width $MQMobile - 1px)
+    padding 0 0.5rem
+
+</style>

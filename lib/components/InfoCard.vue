@@ -2,7 +2,6 @@
   <div class="info-card">
     <div
       class="info-card-header"
-      :style="headerStyle"
     >
       <img
         class="info-avatar"
@@ -82,7 +81,6 @@
 <script>
 import IconInfo from './IconInfo.vue'
 import IconSns from './IconSns.vue'
-import GeoPattern from 'geopattern'
 
 export default {
   name: 'InfoCard',
@@ -123,12 +121,6 @@ export default {
 
     sns () {
       return this.info.sns || null
-    },
-
-    headerStyle () {
-      return {
-        'background-image': !this.$ssrContext ? GeoPattern.generate(this.nickname, { color: '#eee' }).toDataUrl() : null,
-      }
     },
   },
 }

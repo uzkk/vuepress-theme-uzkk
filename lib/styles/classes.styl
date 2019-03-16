@@ -1,15 +1,5 @@
 @require 'variables'
 
-.container
-  margin 0 auto
-  padding 0 1rem
-  @media (min-width $MQWide)
-    max-width (($MQWide + $MQNarrow) / 2)
-  @media (min-width $MQNarrow) and (max-width $MQWide - 1px)
-    max-width $MQNarrow
-  @media (max-width $MQMobile - 1px)
-    padding 0 0.5rem
-
 .main-div
   padding 1.5rem
   background-color #ffffff
