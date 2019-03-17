@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page main-div">
     <Content
       :key="$page.path"
       class="page-content"

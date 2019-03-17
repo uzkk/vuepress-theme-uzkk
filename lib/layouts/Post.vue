@@ -1,6 +1,6 @@
 <template>
   <div class="post-container clearfix">
-    <article class="post">
+    <article class="post main-div">
       <Content
         :key="$page.path"
         class="post-content"
@@ -46,10 +46,6 @@ export default {
 <style lang="stylus">
 
 @require '~@theme/styles/variables'
-
-.post .content
-  h1
-    display none
 
 .post-container
   position relative

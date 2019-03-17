@@ -129,7 +129,7 @@ export default {
 <style lang="stylus" scoped>
 @require '~@theme/styles/variables'
 
-$headerBgHeight = 150px
+$headerBgHeight = 96px
 $avatarHeight = 120px
 
 .info-card

@@ -1,13 +1,13 @@
 <template>
   <div class="posts-list-item">
-    <RouterLink
-      :to="post.path"
-      class="post-link"
-    >
-      <h3 class="post-title">
+    <h3 class="post-title">
+      <RouterLink
+        :to="post.path"
+        class="post-link"
+      >
         {{ post.title }}
-      </h3>
-    </RouterLink>
+      </RouterLink>
+    </h3>
 
     <p class="post-info-list">
       <span
@@ -54,8 +54,9 @@
     </p>
 
     <p
+      v-if="excerpt"
+      v-html="excerpt"
       class="post-excerpt content"
-      v-html="post.excerpt || post.frontmatter.description || ''"
     />
   </div>
 </template>
@@ -76,6 +77,12 @@ export default {
       required: true,
     },
   },
+
+  computed: {
+    excerpt () {
+      return this.post.excerpt || this.post.frontmatter.description
+    }
+  },
 }
 </script>
 
@@ -84,6 +91,12 @@ export default {
 
 .posts-list-item
   padding 0 0.5rem
+  &:first-child
+    > :first-child
+      margin-top 0.5rem
+  &:last-child
+    > :last-child
+      margin-bottom 0.5rem
   &:not(:first-child)
     border-top 1px solid $borderColor
   .post-title
