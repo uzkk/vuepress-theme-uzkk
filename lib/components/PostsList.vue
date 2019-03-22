@@ -1,5 +1,5 @@
 <template>
-  <TransitionFadeSlide
+  <FadeSlideTransition
     tag="div"
     class="posts-list"
     direction="x"
@@ -10,18 +10,18 @@
       :key="post.path"
       :post="post"
     />
-  </TransitionFadeSlide>
+  </FadeSlideTransition>
 </template>
 
 <script>
-import TransitionFadeSlide from './TransitionFadeSlide.vue'
+import FadeSlideTransition from '../transitions/FadeSlide.vue'
 import PostsListItem from './PostsListItem.vue'
 
 export default {
   name: 'PostsList',
 
   components: {
-    TransitionFadeSlide,
+    FadeSlideTransition,
     PostsListItem,
   },
 

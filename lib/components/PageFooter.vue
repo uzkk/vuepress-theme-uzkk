@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer>
     <p>
       <span>Powered by </span>
 
@@ -13,12 +13,12 @@
   </footer>
 </template>
 
-<style lang="stylus" scoped>
-@require '~@theme/styles/variables'
+<style lang="stylus">
 
-.footer
+footer
   color $grayTextColor
   padding 1.5rem 0
   text-align center
   border-top 1px solid $borderColor
+
 </style>

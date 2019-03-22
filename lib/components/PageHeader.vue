@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import TransitionFadeSlide from './TransitionFadeSlide.vue'
+import FadeSlideTransition from '../transitions/FadeSlide.vue'
 import TheHeaderNavbar from './TheHeaderNavbar.vue'
 import TheHeaderBanner from './TheHeaderBanner.vue'
 

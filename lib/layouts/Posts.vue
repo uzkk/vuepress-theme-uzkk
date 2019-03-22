@@ -25,7 +25,7 @@
     </div>
 
     <div class="main-div">
-      <TransitionFadeSlide>
+      <FadeSlideTransition>
         <div
           v-if="filteredPosts.length ===0"
           class="no-posts"
@@ -37,7 +37,7 @@
           v-else
           :posts="filteredPosts"
         />
-      </TransitionFadeSlide>
+      </FadeSlideTransition>
     </div>
   </div>
 </template>
@@ -47,7 +47,7 @@ import PostsList from '../components/PostsList.vue'
 import PostsFilterCategories from '../components/PostsFilterCategories.vue'
 import PostsFilterTags from '../components/PostsFilterTags.vue'
 import PostsFilterSearch from '../components/PostsFilterSearch.vue'
-import TransitionFadeSlide from '../components/TransitionFadeSlide.vue'
+import FadeSlideTransition from '../transitions/FadeSlide.vue'
 
 export default {
   name: 'Posts',
@@ -57,7 +57,7 @@ export default {
     PostsFilterCategories,
     PostsFilterTags,
     PostsFilterSearch,
-    TransitionFadeSlide,
+    FadeSlideTransition,
   },
 
   data () {

@@ -1,34 +1,34 @@
 <template>
   <div>
-    <TheHeader />
+    <PageHeader v-if="$frontmatter.header !== false"/>
 
-    <main class="main">
-      <TransitionFadeSlide>
+    <main class="main-container">
+      <FadeSlideTransition>
         <component :is="layout" :key="$page.path" />
-      </TransitionFadeSlide>
+      </FadeSlideTransition>
     </main>
 
-    <TheFooter />
+    <PageFooter v-if="$frontmatter.footer !== false"/>
   </div>
 </template>
 
 <script>
 
-import TransitionFadeSlide from '../components/TransitionFadeSlide.vue'
-import TheHeader from '../components/TheHeader.vue'
-import TheFooter from '../components/TheFooter.vue'
+import FadeSlideTransition from '../transitions/FadeSlide.vue'
+import PageHeader from '../components/PageHeader.vue'
+import PageFooter from '../components/PageFooter.vue'
 
 export default {
   components: {
-    TransitionFadeSlide,
-    TheHeader,
-    TheFooter,
+    FadeSlideTransition,
+    PageHeader,
+    PageFooter,
   },
 
   computed: {
     layout () {
       const layout = this.$page.frontmatter.layout
-      if (layout && this.$vuepress.getLayoutAsyncComponent(layout)) {
+      if (layout && (this.$vuepress.getLayoutAsyncComponent(layout) || this.$vuepress.getVueComponent(layout))) {
         return layout
       }
 
@@ -47,7 +47,7 @@ export default {
 
 <style lang="stylus">
 
-main
+.main-container
   margin 0 auto
   padding 0 1rem
   @media (min-width $MQWide)
