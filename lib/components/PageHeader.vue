@@ -4,7 +4,7 @@
     :style="headerStyle"
   >
     <TheHeaderNavbar />
-    <TheHeaderBanner :key="$route.path">
+    <TheHeaderBanner :key="$route.path" v-if="hasBanner">
       <slot>
         <h1>
           {{ $page.frontmatter.title || $page.title || $site.title || '' }}
@@ -41,6 +41,12 @@ export default {
         'background-attachment': 'scroll',
         'background-image': `url(${thumbnail})`,
       } : {}
+    },
+
+    hasBanner () {
+      return typeof this.$frontmatter.header === 'object'
+        ? this.$frontmatter.header.banner
+        : true
     },
   },
 }
