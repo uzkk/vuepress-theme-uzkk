@@ -15,32 +15,26 @@
 </template>
 
 <script>
-import FadeSlideTransition from '../transitions/FadeSlide.vue'
-import TheHeaderNavbar from './TheHeaderNavbar.vue'
-import TheHeaderBanner from './TheHeaderBanner.vue'
+
+import FadeSlideTransition from '../../transitions/FadeSlide'
+import TheHeaderNavbar from './HeaderNavbar'
+import TheHeaderBanner from './HeaderBanner'
 
 export default {
-  name: 'TheHeader',
-
   components: {
     TheHeaderNavbar,
     TheHeaderBanner,
   },
 
   computed: {
-    background () {
-      return this.$site.themeConfig.headerBackground || {}
-    },
-
     headerStyle () {
       const { thumbnail } = this.$frontmatter
       return thumbnail ? {
-        'background-size': 'cover',
-        'background-repeat': 'no-repeat',
-        'background-position': 'center',
-        'background-attachment': 'scroll',
-        'background-image': `url(${thumbnail})`,
-      } : {}
+        backgroundImage: `url(${thumbnail})`,
+      } : {
+        border: 'none',
+        marginBottom: '-1rem',
+      }
     },
 
     hasBanner () {
@@ -50,12 +44,20 @@ export default {
     },
   },
 }
+
 </script>
 
 <style lang="stylus" scoped>
+
 @require '~@theme/styles/variables'
 
 .header
+  background-size cover
+  background-repeat no-repeat
   background-color transparent
+  background-position center
+  background-attachment scroll
   transition all 0.5s ease-in-out
+  border-bottom 1px solid $borderColor
+
 </style>

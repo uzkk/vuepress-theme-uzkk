@@ -14,9 +14,9 @@
 
 <script>
 
-import FadeSlideTransition from '../transitions/FadeSlide.vue'
-import PageHeader from '../components/PageHeader.vue'
-import PageFooter from '../components/PageFooter.vue'
+import FadeSlideTransition from '../transitions/FadeSlide'
+import PageHeader from './components/PageHeader'
+import PageFooter from './components/PageFooter'
 
 export default {
   components: {

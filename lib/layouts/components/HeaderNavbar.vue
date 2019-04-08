@@ -68,7 +68,7 @@
 <script>
 import SearchBox from '@SearchBox'
 import throttle from 'lodash.throttle'
-import Icon from './Icon.vue'
+import Icon from '../../components/Icon'
 
 export default {
   name: 'TheHeaderNavbar',

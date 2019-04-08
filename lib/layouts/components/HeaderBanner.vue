@@ -8,19 +8,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'TheHeaderBanner',
-}
-</script>
-
 <style lang="stylus" scoped>
+
 @require '~@theme/styles/variables'
 
 .banner
   cursor default
   height $bannerHeight
-  border-bottom 1px solid $borderColor
   color #000
   .container
     height 100%

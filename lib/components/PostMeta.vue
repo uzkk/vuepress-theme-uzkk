@@ -2,14 +2,14 @@
   <section class="post-meta main-div">
     <section class="post-date clearfix">
       <span class="create-date">
-        {{ `${$themeConfig.lang.createdAt} : ${$page.createdAt}` }}
+        {{ `发布时间：${$page.createdAt}` }}
       </span>
 
       <span
         v-if="$page.updatedAt"
         class="update-date"
       >
-        {{ `${$themeConfig.lang.updatedAt} : ${$page.updatedAt}` }}
+        {{ `更新时间：${$page.updatedAt}` }}
       </span>
     </section>
 
