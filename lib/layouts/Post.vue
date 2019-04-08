@@ -1,5 +1,5 @@
 <template>
-  <div class="post-container clearfix">
+  <div class="post-container clearfix" :class="{ showAside }">
     <article class="post main-div">
       <Content
         :key="$page.path"
@@ -52,27 +52,40 @@ export default {
   margin 1rem auto
   aside
     position relative
+
   @media (max-width $MQMobile - 1px)
     margin 0.5rem auto
-  @media (min-width $MQWide)
+
+  &:not(.showAside)
     article
-      width 75%
+      width 100%
     aside
-      width 25%
-  @media (max-width $MQWide - 1px) and (min-width $MQMobile)
-    article
-      width 70%
-    aside
-      width 30%
-  @media (min-width $MQMobile)
-    article
-      float left
-    aside
-      float left
-      padding-left 1rem
+      display none
+      
   @media (max-width $MQMobile - 1px)
     article
       width 100%
     aside
       display none
+
+  &.showAside
+    @media (min-width $MQWide)
+      article
+        width 75%
+      aside
+        width 25%
+
+    @media (max-width $MQWide - 1px) and (min-width $MQMobile)
+      article
+        width 70%
+      aside
+        width 30%
+
+    @media (min-width $MQMobile)
+      article
+        float left
+      aside
+        float left
+        padding-left 1rem
+
 </style>
