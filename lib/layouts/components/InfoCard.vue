@@ -79,8 +79,8 @@
 </template>
 
 <script>
-import IconInfo from './IconInfo.vue'
-import IconSns from './IconSns.vue'
+import IconInfo from './IconInfo'
+import IconSns from './IconSns'
 
 export default {
   name: 'InfoCard',

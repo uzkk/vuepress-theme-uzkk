@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import IconTag from '../components/IconTag.vue'
+import IconTag from './components/IconTag'
 
 export default {
   name: 'Categories',

@@ -1,10 +1,13 @@
 {
   "name": "vuepress-theme-uzkk",
-  "version": "1.0.0-alpha.13",
+  "version": "1.0.0-alpha.19",
   "main": "lib/index.js",
   "description": "A VuePress theme designed for uzkk.net",
   "author": "Shigma <1700011071@pku.edu.cn>",
   "license": "MIT",
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Shigma/vuepress-theme-uzkk.git"
@@ -26,7 +29,8 @@
     "vuepress-plugin-mathjax": "^1.2.0",
     "vuepress-plugin-pangu": "^1.0.0",
     "vuepress-plugin-serve": "^1.0.0",
-    "vuepress-plugin-smooth-scroll": "^0.0.3"
+    "vuepress-plugin-smooth-scroll": "^0.0.3",
+    "js-yaml-loader": "^1.0.1"
   },
   "devDependencies": {
     "@shigma/svg-font": "^1.0.0",

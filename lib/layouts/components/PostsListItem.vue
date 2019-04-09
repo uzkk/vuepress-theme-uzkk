@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import IconInfo from './IconInfo.vue'
+import IconInfo from './IconInfo'
 
 export default {
   name: 'PostsListItem',

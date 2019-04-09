@@ -43,10 +43,10 @@
 </template>
 
 <script>
-import PostsList from '../components/PostsList.vue'
-import PostsFilterCategories from '../components/PostsFilterCategories.vue'
-import PostsFilterTags from '../components/PostsFilterTags.vue'
-import PostsFilterSearch from '../components/PostsFilterSearch.vue'
+import PostsList from './components/PostsList'
+import PostsFilterCategories from './components/PostsFilterCategories'
+import PostsFilterTags from './components/PostsFilterTags'
+import PostsFilterSearch from './components/PostsFilterSearch'
 import FadeSlideTransition from '../transitions/FadeSlide.vue'
 
 export default {

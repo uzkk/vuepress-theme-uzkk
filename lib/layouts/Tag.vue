@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import PostsList from '../components/PostsList.vue'
+import PostsList from './components/PostsList'
 
 export default {
   name: 'Tag',

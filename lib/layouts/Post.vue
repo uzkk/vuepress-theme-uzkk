@@ -19,9 +19,9 @@
 </template>
 
 <script>
-import PostMeta from '../components/PostMeta.vue'
-import PostNavCard from '../components/PostNavCard.vue'
-import InfoCard from '../components/InfoCard.vue'
+import PostMeta from './components/PostMeta'
+import PostNavCard from './components/PostNavCard'
+import InfoCard from './components/InfoCard'
 
 export default {
   name: 'Post',

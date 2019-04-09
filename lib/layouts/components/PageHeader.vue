@@ -3,27 +3,27 @@
     class="header"
     :style="headerStyle"
   >
-    <TheHeaderNavbar />
-    <TheHeaderBanner :key="$route.path" v-if="hasBanner">
+    <HeaderNavbar />
+    <HeaderBanner :key="$route.path" v-if="$layout !== 'NotFound'">
       <slot>
         <h1>
-          {{ $page.frontmatter.title || $page.title || $site.title || '' }}
+          {{ $frontmatter.title || $page.title || $site.title || '' }}
         </h1>
       </slot>
-    </TheHeaderBanner>
+    </HeaderBanner>
   </header>
 </template>
 
 <script>
 
 import FadeSlideTransition from '../../transitions/FadeSlide'
-import TheHeaderNavbar from './HeaderNavbar'
-import TheHeaderBanner from './HeaderBanner'
+import HeaderNavbar from './HeaderNavbar'
+import HeaderBanner from './HeaderBanner'
 
 export default {
   components: {
-    TheHeaderNavbar,
-    TheHeaderBanner,
+    HeaderNavbar,
+    HeaderBanner,
   },
 
   computed: {
@@ -35,12 +35,6 @@ export default {
         border: 'none',
         marginBottom: '-1rem',
       }
-    },
-
-    hasBanner () {
-      return typeof this.$frontmatter.header === 'object'
-        ? this.$frontmatter.header.banner
-        : true
     },
   },
 }

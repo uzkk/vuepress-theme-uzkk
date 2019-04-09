@@ -74,8 +74,6 @@ export default {
 
 .collapse-view
   position relative
-  background-color transparent
-  transition background-color 0.3s ease
 
   > .slot-header
     user-select none

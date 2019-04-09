@@ -31,7 +31,7 @@
 <script>
 import throttle from 'lodash.throttle'
 import debounce from 'lodash.debounce'
-import Icon from './Icon.vue'
+import Icon from './Icon'
 
 export default {
   name: 'PostNavCard',
