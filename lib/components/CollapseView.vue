@@ -1,12 +1,15 @@
 <template>
-  <div class="collapse-view" :class="{ header: $slots.header, closed: isClosed }">
-    <div class="slot-header" @click="onClickHeader" v-if="$slots.header">
-      <slot name="header"/>
+  <div class="collapse-view">
+    <div class="collapse-header" @click="onClickHeader" v-if="hasHeader">
+      <slot name="header-open" v-if="isOpen">
+        <slot name="header"/>
+      </slot>
+      <slot name="header-closed" v-else>
+        <slot name="header"/>
+      </slot>
     </div>
-    <collapse-transition
-      @before-enter="beforeEnter" @after-enter="afterEnter"
-      @before-leave="beforeLeave" @after-leave="afterLeave">
-      <div class="collpase-content" v-show="isOpen">
+    <collapse-transition>
+      <div class="collapse-content" v-show="isOpen">
         <slot/>
       </div>
     </collapse-transition>
@@ -29,11 +32,18 @@ export default {
 
   data: () => ({
     isOpen: true,
-    isClosed: false,
   }),
 
   components: {
     CollapseTransition,
+  },
+  
+  computed: {
+    hasHeader () {
+      return this.$slots.header
+        || this.$slots['header-open'] && this.isOpen
+        || this.$slots['header-closed'] && !this.isOpen
+    },
   },
 
   created () {
@@ -47,24 +57,6 @@ export default {
         if (isBoolean(value) && value ^ this.isOpen) this.isOpen = value
       })
     }
-    this.isClosed = !this.isOpen
-  },
-
-  methods: {
-    beforeEnter () {
-      this.$emit('before-update')
-      this.isClosed = false
-    },
-    afterEnter () {
-      this.$emit('after-update')
-    },
-    beforeLeave () {
-      this.$emit('before-update')
-    },
-    afterLeave () {
-      this.isClosed = true
-      this.$emit('after-update')
-    },
   },
 }
 
@@ -75,7 +67,7 @@ export default {
 .collapse-view
   position relative
 
-  > .slot-header
+  > .collapse-header
     user-select none
     color #303133
     font-weight bold
@@ -85,14 +77,11 @@ export default {
     position relative
     transition 0.3s ease
 
-  > .collpase-content
+  > .collapse-content
     position relative
     transition 0.3s ease
 
     > :last-child
       margin-bottom 0
-
-  &.closed:not(.header)
-    border-bottom none
 
 </style>

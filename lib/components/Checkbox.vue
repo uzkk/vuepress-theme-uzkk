@@ -1,5 +1,5 @@
 <template>
-  <label :class="{ focused, disabled, checked: value }">
+  <label :class="{ disabled, checked: value }">
     <span class="checkbox">
       <span class="inner"></span>
       <input type="checkbox" :disabled="disabled" :value="label" v-model="model">
@@ -24,10 +24,6 @@ export default {
     prop: 'value',
     event: 'update',
   },
-
-  data: () => ({
-    focused: false,
-  }),
 
   computed: {
     model: {
@@ -98,14 +94,24 @@ label
     margin-left 4px
     vertical-align middle
 
-  &.checked > .checkbox > span
-    background-color #409EFF
-    border-color #409EFF
-
-    &::after
-      transform rotate(45deg) scaleY(1)
+  &:hover > .checkbox > span
+    border-color #409eff
 
   &.checked
     color #409EFF
+    > .checkbox > span
+      background-color #409EFF
+      border-color #409EFF
+      &::after
+        transform rotate(45deg) scaleY(1)
+
+  &.disabled
+    cursor default
+    color $disabledColor
+    > .checkbox > span
+      border-color #dcdfe6
+    &.checked
+      > .checkbox > span
+        background-color #dcdfe6
 
 </style>

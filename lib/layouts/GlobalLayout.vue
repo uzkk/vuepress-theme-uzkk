@@ -14,6 +14,7 @@
 
 <script>
 
+import '../fonts/index.css'
 import FadeSlideTransition from '../transitions/FadeSlide'
 import PageHeader from './components/PageHeader'
 import PageFooter from './components/PageFooter'

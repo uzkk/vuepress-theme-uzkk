@@ -1,6 +1,6 @@
 <template>
   <div class="tags">
-    <div class="main-div">
+    <div class="section">
       <h2>{{ $themeConfig.lang.tags }}</h2>
 
       <RouterLink

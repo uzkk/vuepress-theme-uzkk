@@ -1,5 +1,5 @@
 <template>
-  <label :class="{ focused, disabled, checked: label === model }">
+  <label :class="{ disabled, checked: label === model }">
     <span class="radio">
       <span class="inner"></span>
       <input type="radio" :disabled="disabled" :value="label" v-model="model">
@@ -23,10 +23,6 @@ export default {
     prop: 'value',
     event: 'input',
   },
-
-  data: () => ({
-    focused: false,
-  }),
 
   computed: {
     model: {
@@ -94,17 +90,25 @@ label
     margin-left 0.2em
     vertical-align baseline
 
-  &:hover > .radio > span
+  &:hover:not(.disabled) > .radio > span
     border-color #409eff
-
-  &.checked > .radio > span
-    background-color #409EFF
-    border-color #409EFF
-
-    &::after
-      transform translate(-50%, -50%) scale(1)
 
   &.checked
     color #409EFF
+    > .radio > span
+      background-color #409EFF
+      border-color #409EFF
+      &::after
+        transform translate(-50%, -50%) scale(1)
+
+  &.disabled
+    cursor default
+    color $disabledColor
+    > .radio > span
+      border-color #dcdfe6
+
+  &.disabled.checked
+    > .radio > span
+      background-color #dcdfe6
 
 </style>

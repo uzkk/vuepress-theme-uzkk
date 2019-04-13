@@ -1,14 +1,19 @@
 @require 'variables'
 
-.main-div
+.tac
+  text-align center
+
+.section
   padding 1.5rem
   background-color #ffffff
-  border-radius 5px
+  border-radius 0.5rem
   overflow hidden
   @media (max-width $MQMobile - 1px)
     padding 1rem
   &:not(:first-child)
     margin-top 1rem
+    @media (max-width $MQMobile - 1px)
+      margin-top 0.5rem
   &:not(:last-child)
     margin-bottom 1rem
     @media (max-width $MQMobile - 1px)

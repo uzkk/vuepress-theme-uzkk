@@ -1,5 +1,5 @@
 <template>
-  <div class="main-div not-found">
+  <div class="section not-found">
     <h1>404 Not Found</h1>
 
     <p>{{ $themeConfig.lang.notFound }}</p>

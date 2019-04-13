@@ -1,6 +1,6 @@
 <template>
   <div class="categories">
-    <div class="main-div">
+    <div class="section">
       <h2>{{ $themeConfig.lang.categories }}</h2>
 
       <RouterLink

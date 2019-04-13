@@ -1,6 +1,6 @@
 <template>
   <div class="posts">
-    <div class="main-div">
+    <div class="section">
       <h3 class="filter-categories">
         <RouterLink to="/posts/categories/">
           {{ $themeConfig.lang.categories }}
@@ -24,7 +24,7 @@
       <PostsFilterSearch v-model="filterSearch" />
     </div>
 
-    <div class="main-div">
+    <div class="section">
       <FadeSlideTransition>
         <div
           v-if="filteredPosts.length ===0"

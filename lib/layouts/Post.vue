@@ -1,6 +1,6 @@
 <template>
   <div class="post-container clearfix" :class="{ showAside }">
-    <article class="post main-div">
+    <article class="post section">
       <Content
         :key="$page.path"
         class="post-content"
@@ -8,11 +8,11 @@
     </article>
 
     <aside class="aside">
-      <InfoCard class="main-div" />
+      <InfoCard class="section" />
       <PostMeta />
       <PostNavCard
         v-if="$page.type === 'post'"
-        class="main-div"
+        class="section"
       />
     </aside>
   </div>

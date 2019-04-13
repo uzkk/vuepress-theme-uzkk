@@ -1,7 +1,7 @@
 <template>
   <div class="category">
     <PostsList
-      class="main-div"
+      class="section"
       :posts="$category.posts"
     />
   </div>
