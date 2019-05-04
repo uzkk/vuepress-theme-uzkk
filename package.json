@@ -1,6 +1,6 @@
 {
   "name": "vuepress-theme-uzkk",
-  "version": "1.0.0-alpha.26",
+  "version": "1.0.0-alpha.34",
   "main": "lib/index.js",
   "description": "A VuePress theme designed for uzkk.net",
   "author": "Shigma <1700011071@pku.edu.cn>",
@@ -17,24 +17,23 @@
   },
   "dependencies": {
     "@vue/babel-preset-jsx": "^1.0.0-beta.2",
-    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.46",
-    "@vuepress/plugin-medium-zoom": "^1.0.0-alpha.46",
-    "@vuepress/plugin-nprogress": "^1.0.0-alpha.46",
-    "@vuepress/plugin-search": "^1.0.0-alpha.46",
+    "@vuepress/plugin-back-to-top": "^1.0.0-alpha.47",
+    "@vuepress/plugin-nprogress": "^1.0.0-alpha.47",
+    "@vuepress/plugin-search": "^1.0.0-alpha.47",
     "date-fns": "^1.30.1",
     "js-yaml-loader": "^1.0.1",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
+    "string-width": "^4.1.0",
     "vuepress-plugin-dehydrate": "^1.0.2",
     "vuepress-plugin-mathjax": "^1.2.0",
+    "vuepress-plugin-medium-zoom": "^1.1.1",
     "vuepress-plugin-pangu": "^1.0.0",
-    "vuepress-plugin-serve": "^1.0.0",
-    "vuepress-plugin-smooth-scroll": "^0.0.3",
-    "webfont": "^8.2.1"
+    "vuepress-plugin-serve": "^1.1.0",
+    "vuepress-plugin-smooth-scroll": "^0.0.3"
   },
   "devDependencies": {
-    "@shigma/svg-font": "^1.0.0",
-    "vuepress": "^1.0.0-alpha.46",
-    "vuepress-plugin-serve": "^1.0.0"
+    "vuepress": "^1.0.0-alpha.47",
+    "webfont": "^8.2.1"
   }
 }
