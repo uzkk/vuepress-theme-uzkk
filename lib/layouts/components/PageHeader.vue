@@ -4,7 +4,7 @@
     :style="headerStyle"
   >
     <HeaderNavbar />
-    <HeaderBanner :key="$route.path" v-if="$layout !== 'NotFound'">
+    <HeaderBanner :key="$route.path" v-if="$frontmatter.banner !== false && $layout !== 'NotFound'">
       <slot>
         <h1>
           {{ $frontmatter.title || $page.title || $site.title || '' }}
@@ -28,12 +28,12 @@ export default {
 
   computed: {
     headerStyle () {
-      const { thumbnail } = this.$frontmatter
+      const { thumbnail, banner } = this.$frontmatter
       return thumbnail ? {
         backgroundImage: `url(${thumbnail})`,
       } : {
         border: 'none',
-        marginBottom: '-1rem',
+        marginBottom: banner === false ? '0.5rem' : '-1rem',
       }
     },
   },

@@ -1,3 +1,9 @@
+@keyframes rotating
+  0%
+    transform rotateZ(0)
+  100%
+    transform rotateZ(360deg)
+
 figure
   margin 1em 0
   img
@@ -9,3 +15,10 @@ figure
     font-size 0.9em
     line-height 2
     padding 0.2em 0
+
+i.icon-loading, i.icon-spinner
+  display inline-block
+  animation rotating 1s linear infinite
+
+i.icon-loading
+  transform-origin 0.47em 0.45em

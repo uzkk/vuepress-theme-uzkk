@@ -44,7 +44,7 @@ button
   border-radius 0.4em
   color #fff
   cursor pointer
-  padding 0.6em 0.4em
+  padding 0.6em 1em
   transition 0.3s ease
 
   &:focus
@@ -58,6 +58,22 @@ button
     active-bg-color($accentColor)
 
   &.warning
-    active-bg-color(#f33)
+    active-bg-color($warningColor)
+
+  &.success
+    active-bg-color($successColor)
+
+  &.light
+    background-color #fff
+    border 1px solid $borderColor
+    color #606266
+    &:hover
+      color $accentColor
+      border-color $accentColor
+      background-color lighten($accentColor, 80%)
+    &:active
+      color darken($accentColor, 20%)
+      border-color darken($accentColor, 20%)
+      background-color lighten($accentColor, 60%)
 
 </style>
